@@ -36,7 +36,7 @@ export class FotoPage {
     alert.present();
   }
 
-  get(id: number){
+  get(id){
     this.presentLoading();
     this.incidenciaPrv.getFoto(id).subscribe(data => {
       this.base64 = data;
