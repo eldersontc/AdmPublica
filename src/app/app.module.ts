@@ -3,23 +3,30 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { IncidenciaService } from '../pages/home/home.service';
-
 import { GoogleMaps } from '@ionic-native/google-maps';
+import { Diagnostic } from '@ionic-native/diagnostic';
+import { LocationAccuracy } from '@ionic-native/location-accuracy';
+
+import { IncidenciaPage } from '../pages/incidencia/incidencia';
+import { IncidenciaProvider } from '../providers/incidencia/incidencia';
+import { UsuarioProvider } from '../providers/usuario/usuario';
+import { ListUsuarioPage } from '../pages/list-usuario/list-usuario';
+import { UsuarioPage } from '../pages/usuario/usuario';
+import { FotoPage } from '../pages/foto/foto';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage
+    IncidenciaPage,
+    ListUsuarioPage,
+    UsuarioPage,
+    FotoPage
   ],
   imports: [
     BrowserModule,
@@ -29,15 +36,20 @@ import { GoogleMaps } from '@ionic-native/google-maps';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage
+    IncidenciaPage,
+    ListUsuarioPage,
+    UsuarioPage,
+    FotoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    IncidenciaService,
     GoogleMaps,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    Diagnostic,
+    LocationAccuracy,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    IncidenciaProvider,
+    UsuarioProvider
   ]
 })
 export class AppModule {}
