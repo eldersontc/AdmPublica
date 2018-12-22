@@ -1,0 +1,7 @@
+{
+  "name": "appsrd",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
