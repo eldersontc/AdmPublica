@@ -142,6 +142,7 @@ export class IncidenciaPage {
         this.showError();
       }
     );
+
   }
 
   moveCamera(){

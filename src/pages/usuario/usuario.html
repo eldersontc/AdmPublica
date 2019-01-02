@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>{{usuario.id > 0 ? 'Editar' : 'Nuevo'}} usuario</ion-title>
+    <ion-title>{{usuario.id > 0 ? 'Editar' : 'Nuevo'}}</ion-title>
     <ion-buttons end>
       <button ion-button *ngIf="usuario.id > 0" icon-only (click)="showConfirm()">
         <ion-icon name="trash"></ion-icon>

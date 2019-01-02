@@ -54,7 +54,7 @@ export class MyApp {
 
   showError() {
     const alert = this.alertCtrl.create({
-      title: 'Autenticación',
+      title: 'Error',
       subTitle: 'Usuario o Password incorrecto.',
       buttons: ['OK']
     });
@@ -73,7 +73,7 @@ export class MyApp {
       if (data.perfil == 'ADMINISTRADOR'){
         this.pages = [
           { title: 'Basura en la vía pública', component: IncidenciaPage, icon: 'pin' },
-          { title: 'Adm. usuarios', component: ListUsuarioPage, icon: 'people' }
+          { title: 'Usuarios', component: ListUsuarioPage, icon: 'people' }
         ];
       } else {
         this.pages = [

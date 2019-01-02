@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Adm. usuarios</ion-title>
+    <ion-title>Usuarios</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="add()">
         <ion-icon name="person-add"></ion-icon>
@@ -15,7 +15,7 @@
 <ion-content>
   <ion-list>
     <button ion-item *ngFor="let d of data" (click)="edit(d)" icon-start>
-      <ion-icon name="person" item-start></ion-icon>
+      <ion-icon name="contact" color="secondary" item-start></ion-icon>
       {{ d.alias }}
     </button>
   </ion-list>

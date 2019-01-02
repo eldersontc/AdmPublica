@@ -7,7 +7,7 @@ export class IncidenciaProvider {
 
   constructor(public http: HttpClient) {}
 
-  private apiURL = 'https://190.234.66.232:88/api/incidencia';
+  private apiURL = 'http://190.234.66.232:88/api/incidencia';
 
   get(): Observable<IIncidencia[]> {
       return this.http.get<IIncidencia[]>(this.apiURL);

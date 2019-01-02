@@ -7,7 +7,7 @@ export class UsuarioProvider {
 
   constructor(public http: HttpClient) {}
 
-  private apiURL = 'https://190.234.66.232:88/api/usuario/';
+  private apiURL = 'http://190.234.66.232:88/api/usuario/';
 
   auth(params: IUsuario): Observable<IUsuario> {
     return this.http.post<IUsuario>(this.apiURL + 'auth/', params);
